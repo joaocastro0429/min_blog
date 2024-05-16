@@ -1,0 +1,26 @@
+<body  class="container">
+  
+
+<h1>Bem vindo a Home</h1>
+
+<h4>Listagem de posts</h4>
+
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th scope="col">Title</th>
+    <th scope="col">Description</th>
+  </tr>
+  </thead>
+  <% @posts.each do |post| %>
+  <tbody class="table-group-divider">
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.description %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<button type="button" class="btn btn-outline-primary"> <%=  link_to  "posts", posts_path%></button>  
+
+</body>
